@@ -1,32 +1,65 @@
 .container {
-	position: relative;
+	position         : fixed;
+	top              : 0;
+	right            : 0;
+	left             : 0;
+	bottom           : 0;
 	background-image : url('images/NSTexturedFullScreenBackgroundColor.png');
 	background-repeat: repeat;
 }
-header {
-min-height       : 110px;
-background-color : #555;
+
+div.help {
+	background-image     : url('images/iPadBackgroundTexture-grey.png');
+	background-repeat    : repeat;
+	position             : absolute;
+	bottom               : 30px;
+	left                 : 15px;
+	right                : 15px;
+	color                : #aa9;
+	font-family          : 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding              : 10px;
+	box-shadow           : 0 0 6px black;
+	z-index              : 20;
+	border-radius        : 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius   : 3px;
+	-ms-border-radius    : 3px;
+	-o-border-radius     : 3px;
 }
 
-section.content {
-background-color: #666;
-display: block;
-min-height: 700px;
-padding-top:1px;
-}
-
-footer {
-min-height       : 110px;
-background-color : #555;
-position         : absolute;
-left             : 0;
-bottom           : 0;
-right            : 0;
-}
-
-section.content p.contents {
-	width: 950px;
-	margin: 20px auto 20px;
-	min-height: 400px;
-	background-color: #566;
+a.download {
+	-webkit-transition   : all 200ms;
+	-0-transition        : all 200ms;
+	-moz-transition      : all 200ms;
+	-ms-transition       : all 200ms;
+	transition           : all 200ms;
+	z-index              : 30;
+	border               : 1px solid #5D910B;
+	position             : absolute;
+	display              : block;
+	background           : -webkit-linear-gradient(#93BD20, #659E10);
+	background           : -moz-linear-gradient(#93BD20, #659E10);
+	background           : -ms-linear-gradient(#93BD20, #659E10);
+	background           : -o-linear-gradient(#93BD20, #659E10);
+	background           : linear-gradient(#93BD20, #659E10);
+	width                : 100px;
+	height               : 20px;
+	padding              : 10px;
+	left                 : 45%;
+	top                  : 45%;
+	border-radius        : 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius   : 2px;
+	-ms-border-radius    : 2px;
+	-o-border-radius     : 2px;
+	box-shadow           : 0 0 5px #000;
+	-webkit-box-shadow   : 0 0 5px #000;
+	-moz-box-shadow      : 0 0 5px #000;
+	-ms-box-shadow       : 0 0 5px #000;
+	-o-box-shadow        : 0 0 5px #000;
+	text-align           : center;
+	text-decoration      : none;
+	color                : #efefef;
+	font-size            : 15px;
+	font-family          : 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif
 }

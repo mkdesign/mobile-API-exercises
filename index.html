@@ -2,49 +2,37 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="reset.css" />
 	<link rel="stylesheet" href="style.css" />
 	<title>Data Struct</title>
 	<script type="text/javascript" src="zepto.js"></script>
-
 	<script type="text/javascript">
 		Math.rnd    = Math.random;
 		Math.random = function (a,b){
 
 			return Math.floor(Math.rnd()*(b-a+1))+a;
 		};
-
+	
 		$(function(){
-			$('a#troll').tap(function(){
 
-				$(this).css({
-					left : Math.random(5,95)+'%',
-					top  : Math.random(5,95)+'%'
-				})
+			$(window).swipe(function(){
+			//	var ax = $(this).css('left');
+				alert('ass');
 
 			});
-		});
+		})
 		
 	</script>
 </head>
 <body>
 	<div class="container">
-		<header>
-			<h2>Header</h2>
-		</header>
-		<section class="content">
-			<p class="contents">
-				asdasdasd
-				asdasdasd
-				asdasdasd
-				asdasdasd
-				asdasdasd
-				asdasdasd
-				asdasdasd
-			</p>
-		</section>
-		<footer><h2>footer</h2></footer>
+		<div class="downlaod">
+			<div class="help">
+				<span><a href="mailto:mehrad.kavian@gmail.com"><img src="images/Envelope.png" alt="" width="48" height="48" /></a></span>
+			</div>
+			<a class="download" id="troll">Download..!</a>
+		</div>
+
 	</div>
 </body>
 </html>
