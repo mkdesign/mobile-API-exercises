@@ -7,32 +7,45 @@
 	<title>Data Struct</title>
 	<script type="text/javascript" src="zepto.js"></script>
 	<script type="text/javascript">
-		Math.rnd    = Math.random;
-		Math.random = function (a,b){
+		var rnd    = function (a,b){
 
-			return Math.floor(Math.rnd()*(b-a+1))+a;
+			return Math.floor(Math.random()*(b-a+1))+a;
 		};
-	
-		$(function(){
+		window.onload=function()
+		{
+			var adad = document.getElementsByClassName('downlaods').item(0);
+			for ( var i=0;i<100;i++){
+				adad.innerHTML='<a class="download">Download..!</a>';
+			}
+			
+			var troll=document.getElementsByClassName('download');
+			for (var i=0;i<troll.length;i++){
+				troll.item(i).onmouseover=function(){
+					this.style.left=rnd (5,95)+'%';
+					this.style.top=rnd (5,95)+'%';
+			}
 
-			$(window).swipe(function(){
-			//	var ax = $(this).css('left');
-				alert('ass');
-
-			});
-		})
+}
+			
+		}
+		
 		
 	</script>
 </head>
 <body>
 	<div class="container">
-		<div class="downlaod">
+		<div class="downlaods">
 			<div class="help">
 				<span><a href="mailto:mehrad.kavian@gmail.com"><img src="images/Envelope.png" alt="" width="48" height="48" /></a></span>
 			</div>
-			<a class="download" id="troll">Download..!</a>
+			<script type="text/javascript">
+		for(var i=0;i<100;i++){
+			document.write('<a class="download">Click Me</a>');
+		}
+	</script>
 		</div>
 
 	</div>
+
 </body>
 </html>
