@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" href="reset.css" />
 	<link rel="stylesheet" href="style.css" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 	<title>Data Struct</title>
 	<script type="text/javascript" src="zepto.js"></script>
 	<script type="text/javascript">
@@ -11,23 +12,28 @@
 
 			return Math.floor(Math.random()*(b-a+1))+a;
 		};
-		window.onload=function()
-		{
-			var adad = document.getElementsByClassName('downlaods').item(0);
-			for ( var i=0;i<100;i++){
-				adad.innerHTML='<a class="download">Download..!</a>';
-			}
-			
-			var troll=document.getElementsByClassName('download');
-			for (var i=0;i<troll.length;i++){
-				troll.item(i).onmouseover=function(){
-					this.style.left=rnd (5,95)+'%';
-					this.style.top=rnd (5,95)+'%';
-			}
-
-}
-			
-		}
+		$(function(){
+			document.addEventListener('touchmove', function(e){e.preventDefault();}, false);
+		//	$('.download').swipeLeft(function(){
+		//		var that=this;
+		//		setTimeout(function(){
+		//			$(that).css({
+		//				left:5+'%'
+		//			});
+		//		},1000)
+		//	});
+		//	$('.download').swipeRight(function(){
+		//		$(this).css({
+		//			left:95+'%'
+		//		});
+		//	});
+			$('.download').tap(function(){
+				$(this).css({
+					left : rnd(5,95)+'%',
+					top  : rnd(5,95)+'%'
+				});
+			});
+		});
 		
 		
 	</script>
@@ -38,11 +44,9 @@
 			<div class="help">
 				<span><a href="mailto:mehrad.kavian@gmail.com"><img src="images/Envelope.png" alt="" width="48" height="48" /></a></span>
 			</div>
-			<script type="text/javascript">
-		for(var i=0;i<100;i++){
-			document.write('<a class="download">Click Me</a>');
-		}
-	</script>
+			<a class="download" id="troll">Download..!</a>
+			<a class="download" id="troll">Download..!</a>	
+					
 		</div>
 
 	</div>
