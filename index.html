@@ -1,19 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
+	<title>Data Struct</title>
+	
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
 	<link rel="stylesheet" href="reset.css" />
 	<link rel="stylesheet" href="style.css" />
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-	<title>Data Struct</title>
-	<script type="text/javascript" src="event.js"></script>
+
+	<script type="text/javascript" src="zepto.js"></script>
+	<script type="text/javascript" src="hammer.js"></script>
+	<script src="jquery.hammer.js"></script>
 	<script type="text/javascript">
 		var rnd    = function (a,b){
 
 			return Math.floor(Math.random()*(b-a+1))+a;
 		};
-		$(function(){
-			document.addEventListener('touchmove', function(e){e.preventDefault();}, false);
+		window.onload=function(){
+			//document.addEventListener('touchmove', function(e){e.preventDefault();}, false);
 		//	$('.download').swipeLeft(function(){
 		//		var that=this;
 		//		setTimeout(function(){
@@ -27,14 +32,11 @@
 		//			left:95+'%'
 		//		});
 		//	});
-			$('.download').tap(function(){
-				$(this).css({
-					left : rnd(5,95)+'%',
-					top  : rnd(5,95)+'%'
-				});
+			Event.add(".download", "tap", function(){
+
+
 			});
-		});
-		
+		}
 		
 	</script>
 </head>
