@@ -9,14 +9,14 @@
 	<link rel="stylesheet" href="reset.css" />
 	<link rel="stylesheet" href="style.css" />
 
-	<script type="text/javascript" src="jquery.min.js"></script>
-   <script src="hammer.js"></script>
-   <script src="jquery.hammer.js"></script>
+   <script src="zepto.js"></script>
 	<script type="text/javascript">
 		var rnd    = function (a,b){
 
 			return Math.floor(Math.random()*(b-a+1))+a;
 		};
+		var tmp1="f";
+		var tmp2="f";
 		$(function(){
 
 			//document.addEventListener('touchmove', function(e){e.preventDefault();}, false);
@@ -33,19 +33,25 @@
 		//			left:95+'%'
 		//		});
 		//	});
-		$('.download').bind({
-			'tap':function(){
-				$(this).css({
-					top:rnd(5,90)+'%',
-					left:rnd(5,90)+'%'
-
-				});
-			},
-			'doubletap':function(){
-				alert(1);
-			}
-		})
+		$('#ass').tap(function(){
+			tmp1="t";
+		});
+		$('#asd').tap(function(){
+			tmp2="t";
+				
+		});
+		$('#start').tap(function(){
 			
+			if(tmp1=='t'&&tmp2=='t'){
+				for(var i=0;i<$('.download').length();i++){
+					$('.download').css({
+						top:rnd(5,90)+'%',
+						left:rnd(5,90)+'%'
+					})
+				}
+			}
+
+		})
 	})
 		
 	</script>
@@ -56,8 +62,9 @@
 			<div class="help">
 				<span><a href="mailto:mehrad.kavian@gmail.com"><img src="images/Envelope.png" alt="" width="48" height="48" /></a></span>
 			</div>
-			<a class="download">Download..!</a>
-			<a class="download" id="asd">Download..!</a>	
+			<a class="download" id="ass">Download..!</a>
+			<a class="download" id="asd">Download..!</a>
+			<a class="download" id="start">Start..!</a>	
 					
 		</div>
 
