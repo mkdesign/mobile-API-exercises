@@ -1,7 +1,13 @@
-$(function(){
-	// my jq mobile custome code ...
+var rnd    = function (a,b){
 
-	setTimeout(function(){
-		window.scrollTo(0,1);
-	},1);
+	return Math.floor(Math.random()*(b-a+1))+a;
+};
+$(function(){
+
+	$('.download').tap(function(){
+		$(this).css({
+			left:rnd(5,90)+'%',
+			top:rnd(5,90)+'%'
+		})
+	})
 });
