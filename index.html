@@ -1,61 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-	<title>Data Struct</title>
+	<title>Milan</title>
 
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-
 	<link rel="stylesheet" href="reset.css" />
 	<link rel="stylesheet" href="style.css" />
 
-	<script type="text/javascript" src="jquery.min.js"></script>
-   	<script src="jgestures.js"></script>
-	<script type="text/javascript">
-		var rnd    = function (a,b){
-
-			return Math.floor(Math.random()*(b-a+1))+a;
-		};
-		var tmp1="f";
-		var tmp2="f";
-		$(function(){
-
-			//document.addEventListener('touchmove', function(e){e.preventDefault();}, false);
-		//	$('.download').swipeLeft(function(){
-		//		var that=this;
-		//		setTimeout(function(){
-		//			$(that).css({
-		//				left:5+'%'
-		//			});
-		//		},1000)
-		//	});
-		//	$('.download').swipeRight(function(){
-		//		$(this).css({
-		//			left:95+'%'
-		//		});
-		//	});
-		$('#ass').tap(function(){
-			tmp1="t";
-		});
-		$('#asd').tap(function(){
-			tmp2="t";
-				
-		});
-		$('#start').tap(function(){
-			
-			if(tmp1=='t'&&tmp2=='t'){
-				for(var i=0;i<$('.download').length();i++){
-					$('.download').css({
-						top:rnd(5,90)+'%',
-						left:rnd(5,90)+'%'
-					})
-				}
-			}
-
-		})
-	})
-		
-	</script>
+	<script type="text/javascript" src="zepto.js"></script>
+  
 </head>
 <body>
 	<div class="container">
